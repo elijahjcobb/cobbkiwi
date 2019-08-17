@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="59795962-54a9-4290-9153-153b4fbcb07d" name="cobbkiwi" url="http://cobb.kiwi">
+        <fileTransfer host="cobb.kiwi" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/root/v2/" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

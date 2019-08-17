@@ -1,13 +1,297 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*border: solid red 1px;*/
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+	font-family: 'Titillium Web', sans-serif;
+	color: #222;
+	scroll-behavior: smooth;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 20vh;
+	justify-content: space-around;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h1, h2 {
+	font-family: 'Luckiest Guy', cursive;
+}
+
+.nav img {
+	width: 50%;
+	max-width: 200px;
+}
+
+.header {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header h2,
+.header span {
+	color: white;
+	margin: 20px;
+	width: 80vw;
+	text-align: center;
+	text-shadow: 0 0 5px black;
+}
+
+.header h2 {
+	font-size: 3em;
+}
+
+.header span {
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+.about {
+	margin: 40px 20px;
+}
+
+.about p {
+	margin: 0 auto;
+}
+
+.about * {
+	padding: 10px 0;
+}
+
+h2 {
+	text-align: center;
+	color: #032279;
+}
+
+.profilesContainer {
+	margin: 40px 0;
+}
+
+.profiles {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 80vw;
+	margin: 10px auto;
+}
+
+.profile {
+	width: 40%;
+	max-width: 200px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 0 10px lightgray;
+	border-radius: 20px;
+	padding: 10px;
+	text-decoration: none;
+	color: #222;
+}
+
+.profile h3 {
+	width: 100%;
+	text-align: center;
+}
+
+.profile img {
+	width: 80%;
+	border-radius: 100%;
+	box-shadow: 0 0 5px black;
+	margin: 10px 0;
+}
+
+.postDetailContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 80vh;
+	justify-content: space-around;
+}
+
+.postDetailRenderer {
+	width: 80vw;
+	flex-grow: 1;
+}
+
+button {
+	width: 80%;
+	max-width: 300px;
+	background-color: white;
+	color: #032279;
+	border: solid 5px;
+	border-radius: 10px;
+	font-size: 1em;
+	font-weight: bold;
+	height: 40px;
+	margin: 20px auto;
+	transition-property: background-color, color, border-color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 250ms;
+}
+
+button:hover {
+	color: white;
+	border-color: #032279;
+	background-color: #032279;
+}
+
+footer {
+	background-color: #032279;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;;
+}
+
+footer * {
+	color: white;
+}
+
+.mapContainer {
+	margin: 40px 0;
+}
+
+.gMapContainer {
+	width: 80vw;
+	height: 80vh;
+	margin: 10px auto;
+}
+
+.mapPin {
+	width: 30px;
+	height: 50px;
+	position: absolute;
+	transform: translate(-50%, -100%);
+}
+
+.mapDetailContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 0 100px black;
+	border: solid 1px lightgray;
+	min-width: 300px;
+	width: 30%;
+	border-radius: 20px;
+	padding: 20px;
+	background-color: white;
+	position: relative;
+	top: -60vh;
+	left: 35%;
+	z-index: 2;
+}
+
+.mapDetailTitle {
+	font-size: 2em;
+}
+
+.mapDetailPicker {
+	margin: 20px;
+	height: 140px;
+	width: 100%;
+	overflow: auto;
+	border-radius: 20px;
+	border: solid #eee 1px;
+}
+
+.mapDetailPickerRow {
+	padding: 10px;
+	display: flex;
+}
+
+.mapDetailPickerRowTitle {
+	font-weight: bold;
+	flex-grow: 1;
+}
+
+.mapDetailPickerRowDate {
+	color: gray;
+	margin-left: 20px
+}
+
+.mapDetailPickerRow:nth-child(odd) {
+	background-color: #eee;
+	transition: background-color 250ms ease-in-out;
+}
+
+.mapDetailPickerRow:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.mapDetailButton {
+	margin: 10px auto;
+}
+
+@media (min-width: 480px) {
+
+	h2 {
+		font-size: 2em;
+	}
+
+	.nav {
+		flex-direction: row;
+	}
+
+}
+
+@media (min-width: 720px) {
+
+	h2 {
+		font-size: 2.5em;
+	}
+
+
+	.about p {
+		width: 60%;
+		font-size: 1.25em;
+	}
+
+	.profile {
+		transition: transform ease-in-out 250ms;
+	}
+
+	.profile:hover {
+		transform: scale(1.1);
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+}
+
+@media (min-width: 1080px) {
+
+	h2 {
+		font-size: 3em;
+	}
+
+	.about p {
+		width: 50%;
+		font-size: 1.5em;
+	}
+
+}
+
+@media (min-width: 1536px) {
+
+	h1 {
+		font-size: 4em;
+	}
+
 }
