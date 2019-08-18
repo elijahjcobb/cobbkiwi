@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="59795962-54a9-4290-9153-153b4fbcb07d" name="cobbkiwi" url="http://cobb.kiwi">
-        <fileTransfer host="cobb.kiwi" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/root/v2/" accessType="SFTP" keyPair="true">
+        <fileTransfer host="cobb.kiwi" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/root/frontend" accessType="SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

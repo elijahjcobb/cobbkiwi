@@ -704,6 +704,10 @@ export let locations: Location[] = [
 			{
 				title: "Taonga",
 				date: "2019-5-8"
+			},
+			{
+				title: "Last Few Rays",
+				date: "2019-5-9"
 			}
 		]
 	},
@@ -711,13 +715,43 @@ export let locations: Location[] = [
 		title: "Gisbourne",
 		lat: -38.666270,
 		lng: 178.032501,
-		posts: []
+		posts: [
+			{
+				title: "The First Light",
+				date: "2019-5-10"
+			},
+			{
+				title: "Mongrel’s",
+				date: "2019-5-11"
+			},
+			{
+				title: "Motherhood Blessing",
+				date: "2019-5-12"
+			},
+			{
+				title: "Exploding Kittens",
+				date: "2019-5-13"
+			},
+			{
+				title: "Ain’t called “Cobb” for Nothin’",
+				date: "2019-5-14"
+			}
+		]
 	},
 	{
 		title: "Napier",
 		lat: -39.500629,
 		lng: 176.893427,
-		posts: []
+		posts: [
+			{
+				title: "There Goes the Windscreen",
+				date: "2019-5-15"
+			},
+			{
+				title: "The Roaring 30’s",
+				date: "2019-5-16"
+			}
+		]
 	},
 	{
 		title: "Wellington II",

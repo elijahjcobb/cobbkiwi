@@ -30,19 +30,24 @@ export class PostDetail extends React.Component <PostDetailProps, PostDetailStat
 
 	public render(): React.ReactNode {
 
-		let date: Date = new Date(this.props.entry.date);
+		let dateString: string = this.props.entry.date;
+		let dateComponents: string[] = dateString.split("-");
 
-		let options: object = { month: "short", day: "numeric", year: "numeric" };
-		let value: string = new Intl.DateTimeFormat("en-US", options).format(date);
+		const yearNum: number = parseInt(dateComponents[0]);
+		const monthNum: number = parseInt(dateComponents[1]);
+		const dayNum: number = parseInt(dateComponents[2]);
 
-		const year: string = (date.getFullYear() + "").substring(2);
-		const id: string = (date.getMonth() + 1) + "-" + date.getDate() + "-" + year;
+		const year: string = yearNum + "";
+		const month: string = monthNum < 10 ? "" + monthNum : "" + monthNum;
+		const day: string = dayNum < 10 ? "" + dayNum : "" + dayNum;
+
+		const id: string = month + "-" + day + "-" + year;
 
 		return (
 			<div className={"postDetailContainer"}>
 				<h2 className={"postDetailTitle"}>{this.props.entry.title}</h2>
-				<span className={"postDetailDate"}>{value}</span>
-				<iframe title={id} className={"postDetailRenderer"} src={`https://cobb.kiwi/pdf/${id}`} />
+				<span className={"postDetailDate"}>{id}</span>
+				<iframe title={id} className={"postDetailRenderer"} src={`https://cobb.kiwi/pdf/${id.replace("2019", "19")}`} />
 				<button className={"postDetailButton"} onClick={this.props.onClick}>Done</button>
 			</div>
 		);
